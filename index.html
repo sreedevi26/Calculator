@@ -1,34 +1,61 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<script>
-			function largesstnum()
-			{
-				var num1, num2, num3;
-				num1 = (document.getElementById("fnum").value);
-				num2 = (document.getElementById("snum").value);
-// num1=fnum.value;
-// num2=snum.value
-				if(num1>num2)
-				{
-					alert(num1+" is Grater");
-				}
-				else if(num2>num1)
-				{
-					alert(num2+" is Grater");
-				}
-				// else if(num2>num1 && num2>num1)
-				// {
-				// 	window.alert(num2+"is Grater ");
-				// }
-			}
-		</script>
-	</head>
-	
-		<h1 class="text-center">Check Grater Number </h1>
-		<br>
-		 <input type="text" id="fnum" placeholder="Number1"></input><br><br>
-		<input type="text" id="snum" placeholder="Number2"></input><br>
-<button onclick="largesstnum()">submit</button>
-	</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <title>Frontend - Calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./calculator.css">
+
+</head>
+
+<body>
+
+    <div class="outer-container">
+        <!-- Top heading and options section -->
+        <div class="top-section" bg="danger">
+            Calculator
+        </div>
+        <br>
+
+        <div class="calculator-screen-section">
+            <!-- <textarea name="" id="txt" cols="45" rows="3"></textarea><br><br> -->
+            <input id="txt" type="text" class="form-control inp_num"><br><br>
+            <div id='result'></div>
+        </div>
+        <!-- Calculator Buttons  -->
+        
+            <div class="calculator-Button-section">
+                <div class="calculator-item" onclick="displaydata(7)">7</div>
+                <div class="calculator-item" onclick="displaydata(8)">8</div>
+                <div class="calculator-item" onclick="displaydata(9)">9</div>
+                <div class="calculator-item  special-key" onclick="ac()">AC</div>
+                <div class="calculator-item" onclick="displaydata(4)">4</div>
+                <div class="calculator-item" onclick="displaydata(5)">5</div>
+                <div class="calculator-item" onclick="displaydata(6)">6</div>
+                <div class="calculator-item" onclick="displaydata('+')">+</div>
+                <div class="calculator-item" onclick="displaydata(1)">1</div>
+                <div class="calculator-item" onclick="displaydata(2)">2</div>
+                <div class="calculator-item" onclick="displaydata(3)">3</div>
+                <div class="calculator-item" onclick="displaydata('-')">-</div>
+                <div class="calculator-item" onclick="displaydata('.')">.</div>
+                <div class="calculator-item" onclick="displaydata(0)">0</div>
+                <div class="calculator-item" onclick="displaydata('/')">/</div>
+                <div class="calculator-item" onclick="displaydata('*')">x</div>
+                <div class="calculator-item special-key" id="reset" onclick="backspace()">backspace</div>
+                <div class="calculator-item special-key" id="equal" onclick="oper()">=</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Asif Ali Mehmuda</a>.
+  </div> -->
+
+    <!-- <script src="./js/main.js" type="text/javascript"></script> -->
+</body>
+<script src="./calc.js"></script>
+
 </html>
